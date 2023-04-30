@@ -1,4 +1,25 @@
 public class StatsService {
+
+    public int fullSum(int[] sales) {
+        int sum = 0;
+
+        for (int i = 0; i < sales.length; i++) {
+            sum += sales[i];
+        }
+
+        return sum;
+    }
+
+    public int averageAmount(int[] sales) {
+        int average = 0;
+
+        for (int i = 0; i < sales.length; i++) {
+            average += sales[i];
+        }
+
+        return average / 12;
+    }
+
     public int minSales(int[] sales) {
         int minMonth = 0; // номер месяца с минимальными продажами среди просмотренных ранее
 
@@ -24,25 +45,6 @@ public class StatsService {
         return maxMonth + 1; // месяца нумеруются с 1, а индексы массива с 0, нужно сдвинуть ответ на 1
     }
 
-    public int fullSum(int[] sales) {
-        int sum = 0;
-
-        for (int i = 0; i < sales.length; i++) {
-            sum += sales[i];
-        }
-
-        return sum;
-    }
-
-    public int averageAmount(int[] sales) {
-        int average = 0;
-
-        for (int i = 0; i < sales.length; i++) {
-            average += sales[i];
-        }
-
-        return average / 12;
-    }
 
     public int salesBelowAverage(int[] sales) { //salesBelowAverage
         int lowMonths = averageAmount(sales);
