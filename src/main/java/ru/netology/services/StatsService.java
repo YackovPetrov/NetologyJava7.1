@@ -1,3 +1,4 @@
+package ru.netology.services;
 public class StatsService {
 
     public int fullSum(int[] sales) {
